@@ -44,5 +44,48 @@
             </div>
         </div>
     </header>
+
+    <main>
+        <section id="hero">
+            <div class="container">
+                <div class="hero">
+                    <div class="hero__calculator">
+                        <h2 class="hero__calculator--title">Shipping Cost Calculator</h2>
+                        <p class="hero__calculator--text">Get your estimate quote in seconds</p>
+                        <form class="hero__form form">
+                            <div class="form__item">
+                                <label class="form__item--label" for="">From</label>
+                                <input class="form__item--input" type="text" placeholder="Select ZIP code or location ">
+                                <img   class="form__item--img"   src="./images/location.svg" alt="Location" width="18" height="20">
+                            </div>
+                            <div class="form__item">
+                                <label class="form__item--label" for="">To</label>
+                                <input class="form__item--input" type="text" placeholder="Select ZIP code or location ">
+                                <img   class="form__item--img"   src="./images/location.svg" alt="Location" width="18" height="20">
+                            </div>
+                            <div class="form__item">
+                                <label class="form__item--label" for="">Estimate time</label>
+                                <input class="form__item--input"  type="date" placeholder="Select estimate time">
+                            </div>
+                            <div class="form__item">
+                                <label for="transport">Transport type</label>
+                                <div class="form__choice choice">
+                                    <label class="choice__wrapper">
+                                        <input type="radio" name="transport" id="transport">
+                                        <span>Open</span>
+                                    </label>
+                                    <label class="choice__wrapper">
+                                        <input type="radio" name="transport" id="transport">
+                                        <span>Enclosed</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <button type="submit">Get Shipment estimate</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
