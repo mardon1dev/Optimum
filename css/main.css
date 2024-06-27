@@ -671,4 +671,124 @@ body {
 }
 .shipping__way:nth-child(2) {
   flex-direction: row-reverse;
+}
+
+#faq {
+  margin-top: 194px;
+}
+
+.faq {
+  max-width: 732px;
+  width: 100%;
+  margin: 0 auto;
+}
+.faq__title {
+  text-align: center;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 45px;
+  color: rgba(0, 0, 0, 0.87);
+  text-transform: none;
+}
+.faq__text {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.68);
+  text-transform: none;
+}
+.faq__color {
+  color: rgb(255, 125, 68);
+}
+
+.accordion {
+  margin-top: 80px;
+}
+.accordion__item {
+  margin-bottom: 25px;
+  border-bottom: 1px solid rgb(217, 217, 217);
+}
+.accordion__item button[aria-expanded=true] {
+  border-bottom: 1px solid rgb(217, 217, 217);
+}
+.accordion__button {
+  position: relative;
+  display: block;
+  text-align: left;
+  width: 100%;
+  padding: 1em 0;
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 1.15rem;
+  font-weight: 400;
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+}
+.accordion__title {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 21px;
+  color: rgba(0, 0, 0, 0.87);
+  text-transform: none;
+}
+.accordion__icon {
+  display: inline-block;
+  position: absolute;
+  top: 18px;
+  right: 0;
+  width: 18px;
+  height: 18px;
+}
+.accordion__icon::before {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 7px;
+  left: 0px;
+  width: 18px;
+  height: 2px;
+  background: currentColor;
+}
+.accordion__icon::after {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 0px;
+  left: 8px;
+  width: 2px;
+  height: 18px;
+  background: currentColor;
+}
+.accordion__content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 200ms linear, min-height 200ms linear;
+  will-change: opacity, min-height;
+}
+.accordion__content--text {
+  padding: 25px 0;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.68);
+  text-transform: none;
+}
+
+.accordion button[aria-expanded=true] {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.accordion button[aria-expanded=true] .icon::after {
+  width: 0;
+}
+
+.accordion button[aria-expanded=true] + .accordion__content {
+  opacity: 1;
+  min-height: 9em;
+  transition: all 200ms linear;
+  will-change: opacity, max-height;
 }/*# sourceMappingURL=main.css.map */

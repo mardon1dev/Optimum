@@ -1,0 +1,100 @@
+#faq{
+    margin-top: 194px;
+}
+.faq{
+    max-width: 732px;
+    width: 100%;
+    margin: 0 auto;
+    &__title{
+        text-align: center;
+        @include textStyle($fs:38px, $fw:700, $lh:45px,$clr:$color-black, $tt:none)
+    }
+    &__text{
+        text-align: center;
+        margin-top: 15px;
+        @include textStyle($fs:16px, $fw:300, $lh:24px, $clr:$color-gray, $tt:none);
+    }
+    &__color{
+        color: $color-orange;
+    }
+
+}
+.accordion{
+    margin-top: 80px;
+    &__item{
+        margin-bottom: 25px;
+        border-bottom: 1px solid rgba(217, 217, 217, 1);
+    }
+    &__item button[aria-expanded='true']{
+        border-bottom: 1px solid rgba(217, 217, 217, 1);
+    }
+    &__button{
+        position: relative;
+        display: block;
+        text-align: left;
+        width: 100%;
+        padding: 1em 0;
+        color: $color-black;
+        font-size: 1.15rem;
+        font-weight: 400;
+        border: none;
+        background: none;
+        outline: none;
+        cursor: pointer;
+    }
+    &__title{
+        @include textStyle($fs:18px, $fw:600, $lh:21px, $clr:$color-black, $tt:none)
+    }
+    &__icon{
+        display: inline-block;
+        position: absolute;
+        top: 18px;
+        right: 0;
+        width: 18px;
+        height: 18px;
+        &::before{
+            display: block;
+            position: absolute;
+            content: '';
+            top: 7px;
+            left: 0px;
+            width: 18px;
+            height: 2px;
+            background: currentColor;
+        }
+        &::after{
+            display: block;
+            position: absolute;
+            content: '';
+            top: 0px;
+            left: 8px;
+            width: 2px;
+            height: 18px;
+            background: currentColor;
+        }
+    }
+    &__content{
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: opacity 200ms linear, min-height 200ms linear;
+        will-change: opacity, min-height;
+
+        &--text{
+            padding: 25px 0;
+            @include textStyle($fs:16px, $fw:300, $lh:24px, $clr:$color-gray, $tt:none);
+        }
+    }
+}
+  .accordion button[aria-expanded='true'] {
+    color: $color-black;
+  }
+  .accordion button[aria-expanded='true'] .icon::after {
+    width: 0;
+  }
+  .accordion button[aria-expanded='true'] + .accordion__content {
+    opacity: 1;
+    min-height: 9em;
+    transition: all 200ms linear;
+    will-change: opacity, max-height;
+  }
