@@ -12,7 +12,7 @@
     width: 100%;
     padding-top: 180px;
     padding-bottom: 93px;
-    @include display($wrap:wrap, $direction:row, $items:start, $justify:start);
+    @include display($wrap:wrap, $direction:row, $items:flex-start, $justify:flex-start);
     gap: 85px;
 }
 .hero__calculator{
@@ -88,7 +88,7 @@
         cursor: pointer;
         padding: 15px;
         width: 45%;
-        @include display($wrap:nowrap, $direction:row, $items:center, $justify:start);
+        @include display($wrap:nowrap, $direction:row, $items:center, $justify:flex-start);
         gap: 12px;
         background-color: $color-white;
         border-radius: 12px;
@@ -111,7 +111,7 @@
     max-width: 576px;
     width: 100%;
     padding-top: 43px;
-    @include display($wrap:nowrap, $direction:column, $items:start, $justify:left);
+    @include display($wrap:nowrap, $direction:column, $items:flex-start, $justify:left);
     color: $color-white;
     &--text{
         padding-left: 34px;

@@ -1,0 +1,88 @@
+#services{
+    padding-top: 118px;
+}
+.services{
+    width: 100%;
+    &__title{
+        @include textStyle($fs:38px, $fw:700, $lh:30px, $clr:$color-gray, $tt:none);
+        text-align: center;
+    }
+    &__text{
+        margin-top: 8px;
+        @include textStyle($fs:16px, $fw:400, $lh:24px, $clr:$color-gray, $tt:none);
+        text-align: center;
+    }
+    &__wrapper{
+        @include display($wrap:wrap, $direction:row, $items:flex-start, $justify:space-between);
+        row-gap: 37px;
+        column-gap: 24px;
+    }
+    &__item{    
+        max-width: 354px;
+        width: 100%;
+        height: 458px;
+        position: relative;
+        cursor: pointer;
+        transition: all .3s ease;
+        box-shadow: 0 0 2px 0 rgba(183, 183, 183, 1);
+        overflow: hidden;
+        &:hover .services__item--img{
+            height: 238px;
+        }
+        &:hover .services__intro{
+            opacity: 0;
+        }
+        &:hover .services__info{
+            opacity: 1;
+        }
+        &--img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all .3s ease;
+        }
+    }
+    &__intro{
+        position: absolute;
+        @include display($wrap:wrap, $direction:column, $items:flex-start, $justify:flex-start);
+        gap: 19px;
+        bottom: 20px;
+        left: 20px;
+        color: $color-white;
+        &--title{
+            @include textStyle($fs:24px, $fw:600, $lh:29px,$clr:$color-white, $tt:none)
+        }
+        &--link{
+            @include display($wrap:wrap, $direction:row, $items:center, $justify:flex-start);
+            gap: 6.5px;
+            @include textStyle($fs:15px, $fw:500, $lh:18px, $clr: $color-white, $tt: none);
+        }
+        transition: all .3s ease;
+    }
+    &__info{
+        position: relative;
+        z-index: 3;
+        opacity: 0;
+        padding: 20px;
+        @include display($wrap:wrap, $direction:column, $items:flex-start, $justify:flex-start);
+        &--title{
+            @include textStyle($fs:24px, $fw:700, $lh:29px,$clr:$color-black, $tt:none)
+        }
+        &--text{
+        margin-top: 8px;
+            @include textStyle($fs:15px, $fw:500, $lh:18px, $clr:$color-gray, $tt:none)
+        }
+        &--link{
+            margin-top: 15px;
+            @include display($wrap:wrap, $direction:row, $items:center, $justify:flex-start);
+            gap: 6.5px;
+            @include textStyle($fs:15px, $fw:500, $lh:18px, $clr: $color-orange, $tt: none);
+            transition: all .3s linear;
+            &:hover{
+                color: $color-black;
+                gap: 8px;
+            }
+        }
+        transition: all .3s ease;
+    }
+}
