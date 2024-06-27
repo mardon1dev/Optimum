@@ -1,0 +1,30 @@
+#about-us{
+    margin-top: 100px;
+}
+.about-us__wrapper{
+    @include display($wrap:nowrap, $direction:row, $items:start, $justify:space-between);
+
+}
+.about-us__info{
+    max-width: 543px;
+    width: 100%;
+    @include display($wrap:nowrap, $direction:column, $items:center, $justify:flex-start);
+    gap: 50px;
+    &--title{
+        @include textStyle($fs:38px, $fw:700, $lh:46px, $clr:$color-black, $tt:none);
+    }
+    &--text{
+        margin-top: 16px;
+        @include textStyle($fs:16px, $fw:300, $lh:24px, $clr:$color-black, $tt:none);
+    }
+    &--color{
+        color: $color-orange;
+    }
+}
+.about-us__info:nth-child(1){
+    padding-top: 37px;
+}
+.about-us__info:nth-child(2){
+    padding-bottom: 37px;
+    flex-direction: column-reverse;
+}
