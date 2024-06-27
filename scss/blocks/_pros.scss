@@ -1,0 +1,50 @@
+#pros{
+    margin-top: 177px;
+    padding: 75px 0;
+    background: {
+        image: url("../../images/pros-bg.jpg");
+        repeat: no-repeat;
+        position: center;
+        size: 100%;
+    }
+}
+.pros__wrapper{
+    @include display($wrap:wrap, $direction:row, $items:center, $justify:space-between);
+}
+.pros{
+    width: 100%;
+    &__info{
+        max-width: 300px;
+        width: 100%;
+        &--title{
+            @include textStyle($fs:38px, $fw:600, $lh:40px, $clr:$color-white, $tt:none)
+        }
+        &--text{
+            margin-top: 20px;
+            @include textStyle($fs:16px, $fw:400, $lh:19px, $clr:$color-white, $tt:none)
+        }
+    }
+    &__stats{
+        @include display($wrap:wrap, $direction:row, $items:center, $justify:flex-end);
+        gap: 50px;
+        color: $color-white;
+        & .proItem{
+            &__icon{
+                width: 40px;
+                height: 40px;
+                display: grid;
+                place-items: center;
+                background-color: $color-white;
+                border-radius: 8px;
+            }
+            &__title{
+                @include textStyle($fs:50px, $fw:600, $lh:60px, $clr:$color-white, $tt:none)
+            }
+            &__text{
+                @include textStyle($fs:16px, $fw:400, $lh:19px, $clr:$color-white, $tt:none)
+            }
+            @include display($wrap:wrap, $direction:column, $items:flex-start, $justify:flex-start);
+            gap: 10px;
+        }
+    }
+}

@@ -456,4 +456,83 @@ body {
 .services__info--link:hover {
   color: rgba(0, 0, 0, 0.87);
   gap: 8px;
+}
+
+#pros {
+  margin-top: 177px;
+  padding: 75px 0;
+  background-image: url("../../images/pros-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+.pros__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pros {
+  width: 100%;
+}
+.pros__info {
+  max-width: 300px;
+  width: 100%;
+}
+.pros__info--title {
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 40px;
+  color: rgb(255, 255, 255);
+  text-transform: none;
+}
+.pros__info--text {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  color: rgb(255, 255, 255);
+  text-transform: none;
+}
+.pros__stats {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 50px;
+  color: rgb(255, 255, 255);
+}
+.pros__stats .proItem {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.pros__stats .proItem__icon {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+}
+.pros__stats .proItem__title {
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 60px;
+  color: rgb(255, 255, 255);
+  text-transform: none;
+}
+.pros__stats .proItem__text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  color: rgb(255, 255, 255);
+  text-transform: none;
 }/*# sourceMappingURL=main.css.map */
