@@ -1,0 +1,60 @@
+#shipping{
+    margin-top: 96px;
+    padding-top: 75px;
+}
+.shipping{
+    width: 100%;
+    &__info{
+        padding: 0 156px;
+        text-align: center;
+        &--title{
+            @include textStyle($fs:38px, $fw:700, $lh:46px, $clr:$color-black, $tt:none);
+        }
+        &--text{
+            margin-top: 15px;
+            @include textStyle($fs:16px, $fw:300, $lh:24px, $clr:$color-black, $tt:none);
+        }
+        &--color{
+            color: $color-orange;
+        }
+    }
+    &__ways{
+        margin-top: 80px;        
+        @include display($wrap:nowrap, $direction:column, $items:center, $justify:space-between);
+        gap: 50px;
+    }
+    &__way{
+        width: 100%;
+        @include display($wrap:nowrap, $direction:row, $items:center, $justify:space-between);
+        gap: 24px;
+        &--title{
+            @include textStyle($fs:24px, $fw:600, $lh:29px,$clr:$color-black, $tt:none)
+        }
+        &--text{
+            margin-top: 15px;
+            @include textStyle($fs:16px, $fw:300, $lh:24px, $clr:$color-gray, $tt:none);
+        }
+        &--button{
+            margin-top: 29px;
+            max-width: 259px;
+            width: 100%;
+            text-align: center;
+            padding: 17.5px 0;
+            border-radius: 8px;
+            background-color: $color-white;
+            color: $color-black;
+            border: 1px solid $color-orange;
+            text-transform: uppercase;
+            outline: none;
+            cursor: pointer;
+            transition: all .3s ease;
+            &:hover{
+                background-color: $color-orange;
+                color: $color-white;
+            }
+        }
+    }
+    &__way:nth-child(2){
+        flex-direction: row-reverse;
+    }
+}
